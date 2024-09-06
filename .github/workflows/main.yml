@@ -58,6 +58,7 @@ jobs:
           path: .
 
   docker-ci:
+    needs: ['python-ci']
     if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     steps:
